@@ -1,0 +1,47 @@
+.footer {
+    background-color: $color-footer;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    &__logo {
+        font-size: 9rem;
+        text-transform: uppercase;
+        font-weight: 300;
+        color: $color-text-secondary;
+    }
+
+    &-horizontal {
+        width: 100%;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+
+    }
+
+    &__socials {
+        & > *:not(:last-child) {
+            margin-right: 1rem;
+        }
+    }
+
+     &__copyright, &__center {
+        font-size: 1.8rem;
+    }   
+
+    &__quote {
+        font-size: 2.2rem;
+        font-weight: 100;
+    }
+
+    &__center {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        & > *:not(:last-child) {
+            margin-bottom: 1.5rem;
+        } 
+    }
+}
