@@ -1,0 +1,74 @@
+.card {
+    background-color: $color-primary;
+    width: 35rem;
+    height: 50rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 5px 5px 15px rgba(0,0,0, 0.18);
+    &__img {
+        width: 100%;
+        display: block;
+        object-fit: cover;
+    }
+    
+    &__heading {
+        font-family: $typeface-display;
+        font-weight: 500;
+        font-size: 3.4rem;
+        margin: 2rem;
+    }
+
+    &__paragraph {
+        max-width: 30ch;
+        font-size: 1.7rem;
+        line-height: 1.5;
+    }
+
+    &__btn-container {
+        margin: 2rem;
+        display: flex;
+        width: 100%;
+        justify-content: center;
+    }
+
+    &__btn-heart-group {
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        margin-right: 3rem;
+        & span {
+            margin-left: .2rem;
+            font-size: 1.3rem;
+        }
+    }
+
+    &__btn-group {
+        margin-left: 3rem;
+    }
+
+    &__btn {
+        cursor: pointer;
+        font-family: $typeface-display;
+        border-radius: 2px;
+        border: none;
+        font-size: 1.6rem;
+        letter-spacing: 2;
+        &--like {
+            background-color: $color-white;
+            padding: 1rem 2rem;
+            & img {
+                margin-right: .3rem;
+                width: 1.5rem;
+            }
+        }
+
+        &--more {
+            color: $color-white;
+            background-color: $color-accent;
+            padding: 1rem 3rem;
+        }
+    }
+
+}

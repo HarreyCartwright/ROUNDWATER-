@@ -1,0 +1,20 @@
+.offer {
+    padding-top: 10rem;
+    display: grid;
+    
+    &__heading-container {
+        justify-self: center;
+    }
+
+    &__card-container {
+        display: flex;
+        justify-content: center;
+
+        & > *:not(:last-of-type) {
+            margin-right: 2.5rem;
+        }
+        // display: grid;
+        // justify-items: center;
+        // grid-template-columns: repeat(auto-fit, minmax(40rem, 1fr));
+    }
+}

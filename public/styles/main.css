@@ -20,6 +20,61 @@
     text-decoration: none;
     font-size: 1.6rem; }
 
+.card {
+  background-color: #DDF0F1;
+  width: 35rem;
+  height: 50rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.18); }
+  .card__img {
+    width: 100%;
+    display: block;
+    object-fit: cover; }
+  .card__heading {
+    font-family: "Montserrat", sans-serif;
+    font-weight: 500;
+    font-size: 3.4rem;
+    margin: 2rem; }
+  .card__paragraph {
+    max-width: 30ch;
+    font-size: 1.7rem;
+    line-height: 1.5; }
+  .card__btn-container {
+    margin: 2rem;
+    display: flex;
+    width: 100%;
+    justify-content: center; }
+  .card__btn-heart-group {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    margin-right: 3rem; }
+    .card__btn-heart-group span {
+      margin-left: .2rem;
+      font-size: 1.3rem; }
+  .card__btn-group {
+    margin-left: 3rem; }
+  .card__btn {
+    cursor: pointer;
+    font-family: "Montserrat", sans-serif;
+    border-radius: 2px;
+    border: none;
+    font-size: 1.6rem;
+    letter-spacing: 2; }
+    .card__btn--like {
+      background-color: #fff;
+      padding: 1rem 2rem; }
+      .card__btn--like img {
+        margin-right: .3rem;
+        width: 1.5rem; }
+    .card__btn--more {
+      color: #fff;
+      background-color: #FF6584;
+      padding: 1rem 3rem; }
+
 * {
   margin: 0;
   padding: 0;
@@ -28,6 +83,11 @@
 html {
   font-size: 62.5%;
   font-family: "Raleway", sans-serif; }
+
+.heading-primary {
+  font-family: "Montserrat", sans-serif;
+  text-transform: uppercase;
+  font-size: 4.8rem; }
 
 .container {
   display: grid;
@@ -124,3 +184,14 @@ html {
     .about__image-4 {
       grid-column: 2 / -1;
       grid-row: 3 / 4; }
+
+.offer {
+  padding-top: 10rem;
+  display: grid; }
+  .offer__heading-container {
+    justify-self: center; }
+  .offer__card-container {
+    display: flex;
+    justify-content: center; }
+    .offer__card-container > *:not(:last-of-type) {
+      margin-right: 2.5rem; }
