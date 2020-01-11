@@ -1,0 +1,34 @@
+.nav {
+    margin-top: 5rem;
+    display: flex;
+    justify-content: space-around;
+    align-items: baseline;
+
+    &__logo, &__link {
+        font-weight: 300;
+        color: $color-text-secondary;
+        text-transform: uppercase;
+    }
+    
+    &__logo {
+        font-size: 2.4rem;        
+        letter-spacing: 3px;
+    }
+
+    &__list {
+        display: flex;
+    }
+
+    &__item {
+        list-style: none;
+        
+        &:not(:last-of-type) {
+            margin-right: 1.5rem;
+        }
+    }
+
+    &__link {
+        text-decoration: none;
+        font-size: 1.6rem;        
+    }
+}
