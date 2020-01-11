@@ -1,0 +1,81 @@
+.clients {
+    @include backgroundWave(left bottom);    
+    
+    display: grid;
+    justify-items: center;
+    &-container {
+        display: grid;
+        grid-gap: 3rem;
+        align-items: center;
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    &-round, &-squared {
+        @include shadowBox;
+        background-color: $color-primary;
+    }
+
+    
+    &-round {
+        border-radius: 50%;
+        width: 60rem;
+        height: 60rem;
+        
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        & > *:not(:last-child) {
+            margin-bottom: 1.5rem;
+        }
+
+        &__img {
+            width: 50%;
+            height: 50%;
+        }
+
+        &__name {
+            font-family: $typeface-display;
+            font-size: 3rem;
+            text-transform: uppercase;
+            letter-spacing: 1.5;
+            font-weight: 400;
+        }
+
+        &__feedback {
+            font-size: 1.6rem;
+            max-width: 25ch;
+            line-height: 1.5;
+            text-align: center;
+        }
+    }
+
+    &-rectangle {
+        display: grid;
+        grid-row-gap: 2.5rem;
+        grid-template-rows: repeat(3, 17rem);
+    }
+
+    &-squared {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        
+
+        &-text__name {
+            font-family: $typeface-display;
+            font-size: 1.8rem;
+            text-transform: uppercase;
+            margin-bottom: 1.5rem;
+            font-weight: 500;            
+        }
+
+        &-text__feedback {
+            max-width: 40ch;
+            font-size: 1.4rem;
+            line-height: 1.5;
+        }
+       
+    }
+}

@@ -1,4 +1,6 @@
 .about {
+    @include spaceY;
+
     background-image: url("../images/illustartions/wave.svg"), url("../images/illustartions/shape.svg");
     background-repeat: no-repeat;
     background-position: left -3vw bottom, right -.5vw top;

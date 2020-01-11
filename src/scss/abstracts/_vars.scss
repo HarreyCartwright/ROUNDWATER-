@@ -7,3 +7,19 @@ $color-test: #49658C;
 
 $typeface-main: 'Raleway', sans-serif;
 $typeface-display: 'Montserrat', sans-serif;
+
+
+
+@mixin spaceY {
+    padding: 12rem 0;
+}
+
+@mixin backgroundWave ($position) {
+    background-image: url("../images/illustartions/wave.svg");
+    background-repeat: no-repeat;
+    background-position: $position;
+}
+
+@mixin shadowBox {
+    box-shadow: 5px 5px 15px rgba(0,0,0, 0.18);
+}

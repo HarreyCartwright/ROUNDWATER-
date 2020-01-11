@@ -18,12 +18,12 @@
 
 .offer {
     grid-row: 3 / 4;
-    grid-column: center-start / center-end;
+    grid-column: full-start / full-end;
 }
 
 .clients {
     grid-row: 4 / 5;
-    grid-column: center-start / center-end;
+    grid-column: full-start / full-end;
 }
 
 .footer {

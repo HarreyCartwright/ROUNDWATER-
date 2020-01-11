@@ -1,4 +1,7 @@
 .card {
+
+    @include shadowBox;
+
     background-color: $color-primary;
     width: 35rem;
     height: 50rem;
@@ -6,7 +9,6 @@
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
-    box-shadow: 5px 5px 15px rgba(0,0,0, 0.18);
     &__img {
         width: 100%;
         display: block;
