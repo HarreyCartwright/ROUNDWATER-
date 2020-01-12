@@ -4,11 +4,24 @@
     flex-direction: column;
     justify-content: space-around;
     align-items: center;
+
+    @media only screen and (max-width: $bp-1200) {
+        justify-content: center;
+
+        & > *:not(:last-of-type) {
+            margin-bottom: 4rem;
+        }
+    }
+
     &__logo {
         font-size: 9rem;
         text-transform: uppercase;
         font-weight: 300;
         color: $color-text-secondary;
+
+        @media only screen and (max-width: $bp-960) {
+            font-size: 7rem;
+        }
     }
 
     &-horizontal {
@@ -25,6 +38,13 @@
         }
     }
 
+    &__icon {
+        @media only screen and (max-width: $bp-1200) {
+            width: 4rem;
+            height: 4rem;
+        }        
+    }
+
      &__copyright, &__center {
         font-size: 1.8rem;
     }   
@@ -32,6 +52,10 @@
     &__quote {
         font-size: 2.2rem;
         font-weight: 100;
+
+        @media only screen and (max-width: $bp-570) {
+            font-size: 1.8rem;
+        }
     }
 
     &__center {

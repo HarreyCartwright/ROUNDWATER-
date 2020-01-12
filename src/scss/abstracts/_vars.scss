@@ -1,3 +1,5 @@
+// VARIABLES //
+
 $bg-color: #EBFEFF;
 $color-primary: #DDF0F1;
 $color-accent: #FF6584;
@@ -8,7 +10,24 @@ $color-footer: #D4E5EE;
 $typeface-main: 'Raleway', sans-serif;
 $typeface-display: 'Montserrat', sans-serif;
 
+// VARIABLES //
 
+
+//BREAKPOINTS
+
+$bp-1400: 1400px;
+$bp-1200: 1200px;
+$bp-1100: 1100px;
+$bp-1000: 1000px;
+$bp-960: 960px;
+$bp-830: 830px;
+$bp-570: 570px;
+$bp-400: 420px;
+
+//BREAKPOINTS
+
+
+// MIXINS //
 
 @mixin spaceY {
     padding: 12rem 0;
@@ -23,3 +42,12 @@ $typeface-display: 'Montserrat', sans-serif;
 @mixin shadowBox {
     box-shadow: 5px 5px 15px rgba(0,0,0, 0.18);
 }
+
+@mixin columnCenter {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+// MIXINS //

@@ -8,6 +8,17 @@
         grid-gap: 3rem;
         align-items: center;
         grid-template-columns: repeat(2, 1fr);
+
+        @media only screen and (max-width:$bp-1000) {
+             grid-template-columns: 1fr;
+             margin-top: 5rem;
+             margin-bottom: 10rem;
+        }
+    }
+
+    &-heading-container {
+        justify-self: center;
+        align-self: center;
     }
 
     &-round, &-squared {
@@ -25,6 +36,12 @@
         flex-direction: column;
         justify-content: center;
         align-items: center;
+
+        @media only screen and (max-width:$bp-1000) {
+            width: 50rem;
+            height: 50rem;
+            margin: 0 auto;
+       }
 
         & > *:not(:last-child) {
             margin-bottom: 1.5rem;
@@ -62,6 +79,14 @@
         justify-content: space-around;
         align-items: center;
         
+        &__img {
+            width: 20rem;
+            height: 20rem;
+        }
+
+        &-text {
+           margin: 0 2rem;
+        }
 
         &-text__name {
             font-family: $typeface-display;
@@ -75,6 +100,7 @@
             max-width: 40ch;
             font-size: 1.4rem;
             line-height: 1.5;
-        }       
+        }        
+     
     }
 }

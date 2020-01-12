@@ -1,10 +1,11 @@
 .offer {
     @include backgroundWave(right bottom);
     @include spaceY;
-    display: grid;
-    
+    display: grid;   
+   
     &__heading-container {
         justify-self: center;
+        align-self: center;
     }
 
     &__card-container {
@@ -12,7 +13,25 @@
         justify-content: center;
 
         & > *:not(:last-of-type) {
-            margin-right: 2.5rem;
+            margin-right: 5rem;
+        }
+
+        @media only screen and (max-width: $bp-1200) {
+            & > *:not(:last-of-type) {
+                margin-right: 0;
+              }
+        }
+
+        @media only screen and (max-width: $bp-960) {
+          @include columnCenter
+        }
+
+        @media only screen and (max-width: $bp-830) {
+            margin-top: 7rem;                 
+        }
+
+        @media only screen and (max-width: $bp-570) {
+            margin-top: 5rem;
         }
         // display: grid;
         // justify-items: center;

@@ -4,7 +4,14 @@
     background-repeat: no-repeat;
     background-position: right -4vw bottom;
 
- 
+    @media only screen and (max-width: $bp-1200) {
+        background-position: right -10vw bottom;
+    }
+
+    @media only screen and (max-width: $bp-420) {
+        background-position: right -15vw bottom;
+        background-size: 130%;
+    }  
 
     &__group {
         justify-self: center;
@@ -19,15 +26,22 @@
         text-transform: uppercase;
         font-family: $typeface-display;
         font-size: 9rem;
+
+        @media only screen and (max-width: $bp-960) {
+            font-size: 7rem;
+        }
     }
 
     &__heading-secondary {
         font-size: 1.8rem;
         max-width: 60ch;
-        margin: 0 auto;
+        margin: 2rem auto;
         margin-bottom: 4rem;
         line-height: 1.5;
         
+        @media only screen and (max-width: $bp-570) {
+            max-width: 50ch;
+        }
     }
 
     &__btn {

@@ -4,16 +4,32 @@
     background-image: url("../images/illustartions/wave.svg"), url("../images/illustartions/shape.svg");
     background-repeat: no-repeat;
     background-position: left -3vw bottom, right -.5vw top;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    // display: grid;
-    // justify-items: center;
+    // display: flex;
+    // justify-content: center;
     // align-items: center;
-    // grid-template-columns: repeat(2, 1fr);
+    display: grid;
+    justify-items: center;
+    align-items: center;
+    grid-template-columns: repeat(2, minmax(max-content, 1fr));
+
+    @media only screen and (max-width: $bp-1400) {
+        grid-template-columns: 1fr;
+        grid-row-gap: 2rem;
+    }
     
-    &__typography {
-        &-group:not(:last-of-type) {
+    &__typography {    
+
+        &-group {
+            @media only screen and (max-width: $bp-570) {
+                margin-left: 2rem;
+            }
+        }
+
+        &-group:not(:last-of-type) {          
+            margin-bottom: 7.2rem;
+        }
+
+        @media only screen and (max-width: $bp-1200) {
             margin-bottom: 7.2rem;
         }
     }
