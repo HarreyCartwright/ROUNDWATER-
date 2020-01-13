@@ -20,10 +20,7 @@ getElements(".nav__item").forEach(item => {
 //ANIMATION
 
 const tl = gsap.timeline();
-tl.to(".nav__logo", { opacity: 1 }).to(".nav__item", { opacity: 1, stagger: 0.15 })
-    .to(".header__group", { opacity: 1, duration: 1 })
-    .from(".header__group", { scaleX: 1.05, scaleY: 1.05, ease: Power1.easeOut }).to(".body", { overflowY: "scroll" });
-
+tl.from(".header__group", { x: "-100", opacity: 0 }).from(".nav", { opacity: 0, duration: 1 });
 //ANIMATION
 
 

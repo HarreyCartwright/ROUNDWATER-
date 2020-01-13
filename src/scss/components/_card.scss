@@ -1,14 +1,14 @@
 .card {
 
     @include shadowBox;
-
+    @include mouseOverScale;
     background-color: $color-primary;
     width: 35rem;
     height: 50rem;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    align-items: center;
+    align-items: center;  
 
     @media only screen and (max-width: $bp-1200) {
         transform: scale(.8);
@@ -18,7 +18,7 @@
         transform: scale(1);
         margin-top: 4rem;
     }
-
+   
     &__img {
         width: 100%;
         display: block;
@@ -72,14 +72,20 @@
             padding: 1rem 2rem;
             & img {
                 margin-right: .3rem;
-                width: 1.5rem;
+                width: 1.5rem;                
             }
+            
+            @include buttonStates;
+            @include slowButtonStates;
         }
 
         &--more {
             color: $color-white;
             background-color: $color-accent;
             padding: 1rem 3rem;
+
+            @include slowButtonStates;
+            @include buttonStates;
         }
     }
 

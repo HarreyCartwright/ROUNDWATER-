@@ -22,6 +22,10 @@
         @media only screen and (max-width: $bp-960) {
             font-size: 7rem;
         }
+
+        @media only screen and (max-width: $bp-340) {
+            font-size: 4.5rem;
+        }
     }
 
     &-horizontal {
@@ -42,7 +46,11 @@
         @media only screen and (max-width: $bp-1200) {
             width: 4rem;
             height: 4rem;
-        }        
+        }
+        
+        @media only screen and (max-width: $bp-340) {
+            font-size: 2rem;
+        }
     }
 
      &__copyright, &__center {

@@ -58,6 +58,11 @@
         height: 100%;
         display: block;
         object-fit: cover;
+        transition: all .2s;
+        cursor: pointer;
+        
+        @include mouseOverScale;
+
         &-1 {
             grid-row: 1 / -1;
         }

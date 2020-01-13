@@ -1,0 +1,61 @@
+.nav {
+    margin-top: 5rem;
+    display: flex;
+    justify-content: space-around;
+    align-items: baseline;
+
+    @media only screen and (max-width: $bp-570) {
+        background-color: $color-navigation-mobile;
+        padding: 2rem;
+        margin-top: 0;
+    }
+
+    &__logo, &__link {
+        font-weight: 300;
+        color: $color-text-secondary;
+        text-transform: uppercase;
+    }
+    
+    &__logo {
+        font-size: 2.4rem;        
+        letter-spacing: 3px;
+        
+        @media only screen and (max-width: $bp-570) {
+           display: none;
+        }
+    }
+
+    &__list {
+        display: flex;
+        
+        @media only screen and (max-width: $bp-570) {
+            color: $color-white;
+        }
+    }
+
+    &__item {
+        position: relative;
+
+        list-style: none;
+        
+        &:not(:last-of-type) {
+            margin-right: 1.5rem;
+        }
+       
+        @include mouseOverScale;
+    }
+
+    &__link {
+        text-decoration: none;
+        font-size: 1.6rem;
+        @media only screen and (max-width: $bp-570) {
+            color: $color-white;
+        }
+       
+    }
+
+    &__toggle {
+        display: none;        
+    }
+
+}

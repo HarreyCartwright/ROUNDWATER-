@@ -1,32 +1,65 @@
 .container {
     display: grid;
-    grid-template-rows: repeat(4, minmax(100vh, max-content)) 40vh;
+    grid-template-rows: 10rem 90vh repeat(3, minmax(100vh, max-content)) 40vh;
     grid-template-columns: [full-start] minmax(6rem, 1fr) [center-start] repeat(12, [col-start] minmax(min-content, 14rem) [col-end]) [center-end] minmax(6rem, 1fr) [full-end];
     background-color: $bg-color;
+
+    @media only screen and (max-width: $bp-570) {
+        grid-template-rows:  repeat(4, minmax(100vh, max-content)) 40vh;
+    }
 }
 
 
-.header {
-    grid-row: 1 / 2;
+.nav, .header, .about, .offer, .clients, .footer {
     grid-column: full-start / full-end;
+
+}
+
+.nav {
+    grid-row: 1 / 1;
+    grid-column: full-start / full-end;
+
+    @media only screen and (max-width: $bp-570) {
+        grid-row: 6 / -1;
+    }
+}
+
+.header {
+    grid-row: 2 / 3;
+      @media only screen and (max-width: $bp-570) {
+        grid-row: 1 / 2;
+    }
+
 }
 
 .about {
-    grid-row: 2 / 3;
-    grid-column: full-start / full-end;
+    grid-row: 3 / 4;
+      @media only screen and (max-width: $bp-570) {
+        grid-row: 2 / 3;
+    }
+
 }
 
 .offer {
-    grid-row: 3 / 4;
-    grid-column: full-start / full-end;
+    grid-row: 4 / 5;
+      @media only screen and (max-width: $bp-570) {
+        grid-row: 3 / 4;
+    }
+
 }
 
 .clients {
-    grid-row: 4 / 5;
-    grid-column: full-start / full-end;
+    grid-row: 5 / 6;
+      @media only screen and (max-width: $bp-570) {
+        grid-row: 4 / 5;
+    }
+
 }
 
 .footer {
-    grid-row: 5 / -1;
-    grid-column: full-start / full-end;
+    grid-row: 6 / -1;
+      @media only screen and (max-width: $bp-570) {
+        grid-row: 5 / 6;
+    }
+
 }

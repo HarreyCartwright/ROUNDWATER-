@@ -6,6 +6,8 @@ $color-accent: #FF6584;
 $color-text-secondary: #6A7273;
 $color-white: #fff;
 $color-footer: #D4E5EE;
+$color-navigation-mobile: #49658C;
+
 
 $typeface-main: 'Raleway', sans-serif;
 $typeface-display: 'Montserrat', sans-serif;
@@ -23,6 +25,7 @@ $bp-960: 960px;
 $bp-830: 830px;
 $bp-570: 570px;
 $bp-420: 420px;
+$bp-340: 420px;
 
 //BREAKPOINTS
 
@@ -48,6 +51,36 @@ $bp-420: 420px;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+}
+
+@mixin buttonStates {
+    &:hover {
+        @include shadowBox;
+        transform: translateY(-5px);
+    }
+
+    &:active {
+        transform: translateY(-2px);
+    }
+}
+
+@mixin slowButtonStates {
+    transition: all .2s;
+    outline: none;
+}
+
+@mixin slowButtonStates {
+    transition: all .2s;
+    outline: none;
+}
+
+
+@mixin mouseOverScale {
+    &:hover {
+        transform: scale(1.05);
+        transition: all .2s;
+
+    }
 }
 
 // MIXINS //

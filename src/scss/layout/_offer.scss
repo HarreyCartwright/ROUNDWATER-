@@ -2,7 +2,7 @@
     @include backgroundWave(right bottom);
     @include spaceY;
     display: grid;   
-   
+    
     &__heading-container {
         justify-self: center;
         align-self: center;
