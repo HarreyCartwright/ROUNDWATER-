@@ -15,6 +15,9 @@ const sass = require('gulp-sass');
 const clean = require('gulp-clean');
 const { series } = require('gulp');
 const minify = require('gulp-minify');
+const autoprefixer = require('gulp-autoprefixer');
+const cssmin = require('gulp-cssmin');
+const rename = require('gulp-rename');
 
 //copy all HTML files
 function copyHTML() {
@@ -49,6 +52,13 @@ function minifyJS() {
     return gulp.src(paths.src_js).pipe(minify()).pipe(gulp.dest(paths.dest_js))
 }
 
+function autoprefixify() {
+    return gulp.src(`${paths.dest_css}/main.css`).pipe(autoprefixer({ cascade: false })).pipe(gulp.dest(paths.dest_css))
+}
+
+function minifyCSS() {
+    return gulp.src(`${paths.dest_css}/main.css`).pipe(cssmin()).pipe(rename({ suffix: '.min' })).pipe(gulp.dest(paths.dest_css))
+}
 
 //Exports
 exports.copyHTML = copyHTML;
@@ -57,3 +67,5 @@ exports.minifyImages = minifyImages;
 exports.styles = styles;
 exports.watch = watch;
 exports.minifyJS = minifyJS;
+exports.autoprefixify = autoprefixify;
+exports.minifyCSS = minifyCSS;
