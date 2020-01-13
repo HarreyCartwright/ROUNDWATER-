@@ -1,3 +1,38 @@
 .invisible {
     opacity: 0;
 }
+
+.mb-15 {
+    margin-bottom: 1rem;
+}
+
+
+.fade-in {
+    opacity: 0;
+    transition: opacity 250ms ease-in;
+}
+
+.fade-in.appear {
+    opacity: 1;
+}
+
+.from {    
+    &-left {
+        transform: translateX(-50%);
+        opacity: 0;
+    }
+
+    &-right {
+        transform: translateX(50%);
+        opacity: 0;
+    }
+
+    &-left, &-right {
+      transition: transform 400ms ease-in;   
+    }
+}
+
+.from-left.appear, .from-right.appear  {
+    transform: translateX(0);
+    opacity: 1;
+}

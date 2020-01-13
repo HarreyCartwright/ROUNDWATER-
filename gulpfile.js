@@ -1,7 +1,9 @@
 const paths = {
+    src_js: 'src/js/*.js',
     src_scss: 'src/scss/**/*.scss',
     src_html: 'src/*.html',
     src_img: 'src/images/*',
+    dest_js: 'public/js',
     dest_css: 'public/styles',
     dest_html: 'public',
     dest_img: 'public/images'
@@ -12,6 +14,7 @@ const imagemin = require('gulp-imagemin');
 const sass = require('gulp-sass');
 const clean = require('gulp-clean');
 const { series } = require('gulp');
+const minify = require('gulp-minify');
 
 //copy all HTML files
 function copyHTML() {
@@ -39,7 +42,13 @@ function watch() {
     gulp.watch(paths.src_scss, styles);
     //rerender dest html
     gulp.watch(paths.src_html, gulp.series(deleteHTML, copyHTML))
+    gulp.watch(paths.src_js, minifyJS)
 }
+
+function minifyJS() {
+    return gulp.src(paths.src_js).pipe(minify()).pipe(gulp.dest(paths.dest_js))
+}
+
 
 //Exports
 exports.copyHTML = copyHTML;
@@ -47,3 +56,4 @@ exports.deleteHTML = deleteHTML;
 exports.minifyImages = minifyImages;
 exports.styles = styles;
 exports.watch = watch;
+exports.minifyJS = minifyJS;
